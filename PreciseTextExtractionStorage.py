@@ -8,22 +8,23 @@ Created on Fri Feb  9 21:14:49 2024
 import requests
 import json
 from pymongo import MongoClient
+from PIL import Image
 
 # The URL you want to send the POST request to
 url = 'https://mlaas.precise-lab.com/supplement'
 
 # The path to the image file you want to send
-image_file_path = 'C:/Users/roope/Documents/Capstone Project- Product Label Recognition/label2.jpg'   # Replace with the actual path to your image file
+image_file_path = 'C:/Users/roope/Documents/Capstone Project- Product Label Recognition/mtndew2.jpg'   # Replace with the actual path to your image file
 
 # Open and save the image using Pillow to ensure it's in the correct format
 image = Image.open(image_file_path)
-image.save('C:/Users/roope/Documents/Capstone Project- Product Label Recognition/converted_label2.jpg' )  # Save the image in JPEG format
+image.save('C:/Users/roope/Documents/Capstone Project- Product Label Recognition/converted_mtndew2.jpg' )  # Save the image in JPEG format
 
 # Convert the image to PDF
-pdf_file_path = 'C:/Users/roope/Documents/Capstone Project- Product Label Recognition/convertedlabel2.pdf'   # Path where the PDF file will be saved
+pdf_file_path = 'C:/Users/roope/Documents/Capstone Project- Product Label Recognition/convertedmtndew2.pdf'   # Path where the PDF file will be saved
 pdf = FPDF()
 pdf.add_page()
-pdf.image('C:/Users/roope/Documents/Capstone Project- Product Label Recognition/converted_label2.jpg' , x=10, y=10, w=190)
+pdf.image('C:/Users/roope/Documents/Capstone Project- Product Label Recognition/converted_mtndew2.jpg' , x=10, y=10, w=190)
 pdf.output(pdf_file_path, "F")
 
 # Open the PDF file in binary mode

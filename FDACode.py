@@ -203,4 +203,4 @@ def get_FDA_code_from_image_url(image_url):
     return FDA_code
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run

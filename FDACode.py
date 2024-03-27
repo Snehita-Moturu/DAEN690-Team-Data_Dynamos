@@ -2,7 +2,7 @@ import requests
 import openai
 from flask import Flask, request, jsonify
 
-app = Flask(__name__)
+app = Flask(_name_)
 
 @app.route('/')
 def home():
@@ -202,5 +202,5 @@ def get_FDA_code_from_image_url(image_url):
 
     return FDA_code
 
-if __name__ == '__main__':
+if _name_ == '_main_':
     app.run

@@ -1,0 +1,21 @@
+# Python specific files
+*.pyc
+__pycache__/
+*.py[cod]
+
+# IDE specific files
+.vscode/
+.idea/
+
+# Environment specific files
+.env
+
+# Dependency directories
+venv/
+env/
+env2/
+env3/
+
+# Other generated files
+*.log
+.DS_Store

@@ -28,7 +28,7 @@ print("Subclass Data:", subclass_data)
 
 import openai
 
-openai.api_key="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"
+openai.api_key="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"
 
 response = openai.ChatCompletion.create(
     model="gpt-4-vision-preview",
@@ -38,7 +38,7 @@ response = openai.ChatCompletion.create(
             "content": [
                 {
                     "type": "text",
-                    "text": f"Can you tell the container packing type of this product in the image? and categorize the container type based on the following subclass data from FDA {subclass_data}",
+                    "text": f"Can you tell the container packing type of this product in the image? and categorize the container type based on the following subclass data from FDA {subclass_data} and also generate the response in json format",
                 },
                 {
                     "type": "image_url",

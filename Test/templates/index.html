@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Code Identifier</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    <link rel="stylesheet"  href="/static/styles.css">
+</head>
+<body>
+
+<header class="header">
+    <img src="/static/FDA-Social-Graphic.png" alt="Header Image" style="margin-left: 0px;" height="95px" width="500px"> 
+    <img src="/static/logo-precise.jpeg" alt="Header Image" style="margin-left: 600px;" height="95px" width="500px">
+</header>
+
+<div class="card-container">
+    <div class="content-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-container mb-3">
+                        <h1 class="text-center mb-4">Product Code Identifier</h1>
+                        <div class="upload-block" id="uploadBlock">
+                            <span id="uploadLabelText" class="text-center mb-4">Enter URL for the product label image</span>
+                            <input type="text" id="imageUrl" name="imageUrl" placeholder="https://example.com/image.jpg" class="form-control mb-3" style="width: 40%;">
+                            <button onclick="uploadFromUrl()" class="btn btn-upload">Upload</button>
+                        </div>
+                        <label class="form-check-label">
+                            If there is no container/package type, then uncheck this box:
+                            <input type="checkbox" id="subclassToggle" class="form-check-input" checked>
+                        </label>                        
+                        <label id="outputLabel" for="Product Code"> <h3>FDA Product Code</h3></label>
+                        <div id="output" class="form-control">
+                            <div class="output-box-container">
+                                <div class="output-box">Industry
+                                    <div class="nested-placeholder">Industry Placeholder</div>
+                                </div>
+                                <div class="output-box">Class
+                                    <div class="nested-placeholder">Class Placeholder</div>
+                                </div>
+                                <div class="output-box">Subclass
+                                    <div class="nested-placeholder">Subclass Placeholder</div>
+                                </div>
+                                <div class="output-box">PIC
+                                    <div class="nested-placeholder">PIC Placeholder</div>
+                                </div>
+                                <div class="output-box">Product
+                                    <div class="nested-placeholder">Product Placeholder</div>
+                                </div>
+                            </div>
+                            <div class="output-box">Product Code
+                                <div class="nested-placeholder">Product Code Placeholder</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    &copy; 2024 <img src="/static/Mason.jpeg" alt="Footer Logo" height="15px" width="15px"> George Mason University. All Rights Reserved.
+</footer>
+
+<script>
+function uploadFromUrl() {
+    const imageUrl = document.getElementById('imageUrl').value;
+    if (imageUrl.trim() === '') {
+        alert('Please enter a valid URL for the image.');
+        return;
+    }
+
+    const subclassToggle = document.getElementById('subclassToggle').checked;
+
+    const requestBody = {
+        image_url: imageUrl,
+        include_subclass: subclassToggle
+    };
+
+    fetch('/get_fda_code', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({image_url: imageUrl}),
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+    document.querySelector('.output-box-container .output-box:nth-child(1) .nested-placeholder').innerText = data.industry || 'N/A';
+    document.querySelector('.output-box-container .output-box:nth-child(2) .nested-placeholder').innerText = data.class || 'N/A';
+    if (subclassToggle) {
+            document.querySelector('.output-box-container .output-box:nth-child(3) .nested-placeholder').innerText = data.subclass || 'N/A';
+        } else {
+            document.querySelector('.output-box-container .output-box:nth-child(3) .nested-placeholder').innerText = 'No Package Type Provided';
+        }
+    document.querySelector('.output-box-container .output-box:nth-child(4) .nested-placeholder').innerText = data.PIC || 'N/A';
+    document.querySelector('.output-box-container .output-box:nth-child(5) .nested-placeholder').innerText = data.product || 'N/A';
+    document.querySelectorAll('.output-box .nested-placeholder')[5].innerText = data.fda_code || 'N/A';
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        alert('Failed to process the image URL. Please try again.');
+    });
+
+    document.getElementById('imageUrl').value = '';
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+SUBCLASSID,SUBCLASSCODE,SUBCLASSDESC
+5054,E,Not Applicable
+5055,X,Oxygen Permeable Packaging
+5010,O,(52A only) Cookware appliance w/electric heat
+5011,P,(52A only) Cookware appliance w/electric heat- SET
+32,D,Human - Rx/Combination Ingredient
+5013,L,Animal (Food Producing) - Rx/Single Ingredient
+5014,M,Animal (Food Producing) - Rx/Comb Ingredient
+5015,O,Animal (Non-Food Producing) - Non Rx/Single Ingred
+5016,P,Animal (Non-Food Producing) - Non Rx/Comb Ingred
+28,C,Animal Rx/Single Ingredient
+5017,J,Animal (Food Producing) - Non-Rx/Single Ingredient
+65,K,Anml Comb Therap
+5018,K,Animal (Food Producing) - Non-Rx Comb Ingredient
+81,Y,Not Elsewhere Classified (NEC)
+5019,N,Animal (Food Producing) - Investigational
+5020,Q,Animal (Non-Food Producing) Rx/Single Ingredient
+5021,R,Animal (Non-Food Producing) Rx/Comb Ingredient
+5022,S,Animal (Non-Food Producing) - Investigational
+5023,I,Investigational Drug Use
+5025,D,"From Raw Milk Pkgd in Ceramic, Earthenware"
+5026,E,From Pasteurized Milk and Pkgd in Ceramic
+5027,F,"Fresh, Raw Milk and Pkgd in Glass Containers"
+5028,G,From Pasteurized Milk and Pkgd in Glass Containers
+5029,H,"Fresh, Raw Milk and Pkgd in Plastic, Flexible Wrap"
+5030,I,"From Fresh, Raw Milk and Pkgd in Plastic Wrapper"
+5031,J,"From Fresh, Raw Milk and Pkgd in Plastic, Rigid"
+5032,K,"From Pasteurized Milk and Pkgd in Plastic, Rigid"
+5033,L,"From Fresh, Raw Milk and Encased with Wax Coating"
+5034,M,From Pasteurized Milk and Encased with Wax Coating
+5035,N,"From Fresh, Raw Milk and Pkg is Vacuum or MAP Pkd"
+5036,O,From Pasteurized Milk and Pkg is Vacuum or MAP Pkd
+5037,N,Food Use Only
+5038,O,Drug Use Only
+5039,P,Cosmetics Use Only
+5040,Q,Medical Devices Use Only
+5041,R,Multiple Use
+5042,-,No Subclass Used
+5043,L,Product sample for testing or lot release
+92,A,Type B Feed From Type A Med Article
+5,A,Closure Liners&Seals
+6,A,Human Food Enrichment (Further Processing)
+7,A,Fabric
+8,A,Human - Non/Rx Single Ingredient
+9,A,Single Ingred Non Rx
+11,B,Bacterial Antigens
+93,B,Type C Feed From Type A Med Article
+13,B,Capsule
+14,B,Ceramic/Earthenware
+15,B,Coatg For Closures
+16,B,Combo Ingred Non Rx
+17,B,"Human Food Dietary Suppl, 1 Ingred"
+18,B,Human - Non/Rx Combination Ingredient
+94,C,Type B Feed From Type B Feed
+22,C,Bacterial Vaccines
+23,C,Coatg For Cntr
+24,C,Cream
+25,C,Flatware
+26,C,Glass
+27,C,"Human Food Dietary Suppl, Multi Ingred"
+29,C,Human - Rx/Single Ingredient
+95,D,Type C Feed From Type B Or C Feed
+33,D,Human Non-Rx 1 Ingr
+34,D,Animal - Rx/Combination Ingredient
+35,D,Laminated
+36,D,"Liquid, Lotion"
+37,D,Mod Bacterial Vaccine
+39,E,Human Non-Rx Comb Ingr
+40,E,Metal
+42,E,Sens Bacterial Vaccine
+44,F,Human RX 1 Ingr
+46,F,Pads
+47,F,Paper
+48,F,"Plastic, Natrl(Rubber)"
+49,F,Thera Immune Serums
+50,G,Blood Grouping Serum
+51,G,Flex Plastic
+52,G,Human RX Comb Ingr
+53,G,Paste
+54,G,"Plastic, Synth"
+57,H,Nonflex Plastic
+58,H,Powder
+59,I,Human - Investigational
+60,I,Roll On
+62,J,Anml 1 Ingr Therap
+63,J,"Simulated (Artificial Fingernails, etc.)"
+64,J,Wood
+66,K,Sticks
+67,L,Animal Food Nutritional INGR (Further Processing)
+68,L,Tablets
+69,M,Animal Food Supplement (Finished Form)
+71,M,Multiple Cntr
+72,N,Animal Non-Rx Drug
+75,P,Pharma  Necess
+76,R,Animal Rx Drug
+79,W,Wax
+501,V,Vacuum or MAP and other Reduced Oxygen Packaging
+2,A,Aerosol
+5000,H,Final Product; Ready For Use
+5001,J,For Non-Clinical Research Use
+5002,I,For Further Manufacture
+5003,K,For Educational Purposes
+5004,I,(52A only) Tableware for Adult Use
+5005,J,(52A only) Tableware for Adult Use - SET
+5006,K,(52A only) Tableware for Infant/Child Use
+5007,L,(52A only) Tableware for Infant/Child Use - SET
+5008,M,(52A only) Cookware oven/stove/flame
+5009,N,(52A only) Cookware oven/stove/flame - SET
+5044,A,Unflavored
+5045,B,Flavored (Menthol)
+5046,C,Flavored (Other)
+5047,E,"Animal (Food Producing), RX"
+5048,F,"Animal (Food Producing), non-RX"
+5049,G,"Animal (Non-Food Producing), RX"
+5050,H,"Animal (Non-Food Producing), non-Rx"
+5051,J,"Animal (Food and Non-Food Producing), Rx"
+5052,K,"Animal (Food and Non-Food Producing), non-Rx"
+5053,D,Flavored (Tobacco)
